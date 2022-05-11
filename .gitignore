@@ -1,0 +1,8 @@
+.idea
+
+
+#not sure if it needed to ignore, uncoment by yourself
+package-lock.json
+
+build
+node_modules
