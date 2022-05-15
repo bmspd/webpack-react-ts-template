@@ -3,7 +3,6 @@ import IMAGE from './react.png'
 import LOGO from './logo.svg'
 import ClickCounter from './ClickCounter'
 export const App = () => {
-  const test = 'a'
   return (
     <>
       <h1>Hello :')</h1>

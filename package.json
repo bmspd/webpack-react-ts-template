@@ -37,6 +37,8 @@
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.5.0",
     "html-webpack-plugin": "^5.5.0",
+    "husky": "^4.3.8",
+    "lint-staged": "^12.4.1",
     "prettier": "^2.6.2",
     "react-refresh": "^0.13.0",
     "style-loader": "^3.3.1",
@@ -45,5 +47,18 @@
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.9.0",
     "webpack-merge": "^5.8.0"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json}": [
+        "eslint --fix"
+      ],
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks" : {
+      "pre-commit": "lint-staged"
+    }
   }
 }
