@@ -31,8 +31,19 @@ module.exports = {
         type: 'asset/resource',
       },
       {
-        test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
+        test: /\.(woff(2)?|eot|ttf|otf)$/,
         type: 'asset/inline',
+      },
+      {
+        test: /\.svg$/i,
+        type: 'asset',
+        resourceQuery: /inline/,
+      },
+      {
+        test: /\.svg$/i,
+        issuer: /\.[jt]sx?$/,
+        resourceQuery: { not: [/inline/] },
+        use: ['@svgr/webpack'],
       },
     ],
   },
