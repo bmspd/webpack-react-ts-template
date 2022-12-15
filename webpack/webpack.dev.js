@@ -1,6 +1,7 @@
 const webpack = require('webpack')
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
 const ESLintPlugin = require('eslint-webpack-plugin')
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 
 module.exports = {
   mode: 'development',
@@ -16,5 +17,6 @@ module.exports = {
     }),
     new ReactRefreshWebpackPlugin(),
     new ESLintPlugin({ extensions: ['js', 'jsx', 'ts', 'tsx'] }),
+    new ForkTsCheckerWebpackPlugin(),
   ],
 }
